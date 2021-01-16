@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<body>
+    <h4>List of Students</h4>
+    1.
+    <input id="n1" type="text">
+    <br>
+    <br>
+    2.
+    <input id="n2" type="text">
+    <br>
+    <br>
+    3.
+    <input id="n3" type="text">
+    <br>
+    <br>
+    4.
+    <input id="n4" type="text">
+    <h4 id="b"></h4>
+    <input id="a" type="button" onclick="submit()" value="Submit">
+    <input id="c" type="button" onclick="sort1()" value="Sort">
+<style>
+   body{
+       text-align: center;
+       background-color: burlywood;
+   }
+#c{
+    display: none;
+}
+</style>
+<script>
+    var x=[]
+    function submit(){
+        var i=document.getElementById("n1").value;
+        if(i!=""){
+        x.push(i);
+        }
+        var i2=document.getElementById("n2").value;
+        if(i2!=""){
+        x.push(i2);
+        }
+        var i3=document.getElementById("n3").value;
+        if(i3!=""){
+        x.push(i3);
+        }
+        var i4=document.getElementById("n4").value;
+        if(i4!=""){
+        x.push(i4);
+        }
+        console.log(x);
+        document.getElementById("b").innerHTML=x;
+        document.getElementById("c").style.display="inline-block"
+        document.getElementById("a").style.display="none"
+    }
+function sort1(){
+    x.sort();
+    console.log(x)
+    document.getElementById("b").innerHTML=x;
+    document.getElementById("c").style.display="none"
+        document.getElementById("a").style.display="inline-block"
+}
+</script>
+
+</body>
+</html>
